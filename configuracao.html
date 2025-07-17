@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - ToDo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Itim', cursive;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-[#B4E2EB]">
+    <header>
+        <nav
+            class="w-[100%] bg-[#3276BF] flex justify-between gap-10 items-center fixed top-0 left-0 md:px-10 px-7 py-2 text-center">
+            <button>
+                <img src="https://img.icons8.com/ios11/512/FFFFFF/menu.png" alt="" class="w-12">
+            </button>
+            <div class="mx-auto">
+                <h1 class="text-white text-5xl">Your List</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main class="flex flex-col items-center mt-[20%] md:mt-20">
+        <section id="Dados" class="bg-[#3276BF] flex flex-col p-5 rounded-md">
+            <h1 class="text-3xl text-center">
+                Dados
+            </h1>
+            <p>
+                Apague os dados aqui
+            </p>
+            <button id="apagar-dados" class="bg-red-500 rounded-md p-2">Apagar Dados</button>
+        </section>
+
+        <section id="notificacao" class="bg-[#3276BF] flex flex-col p-5 rounded-md mt-5 text-center">
+            <h1 class="text-3xl text-center">Notificações</h1>
+            <p>
+                Ative ou desative os Pop-ups aqui
+            </p>
+            <button id="ativar-desativar-popUp" class="bg-gray-500 p-2 rounded-md">Desativar Pop-Up</button>
+            <span id="on-off"></span>
+        </section>
+        <a href="index.html">Voltar</a>
+        <div id="pop-up" class="flex fixed top-0 right-0  mx-2 flex-col justify-center gap-5 my-2 w-[50vw]">
+        </div>
+
+
+    </main>
+
+    <script src="config.js"></script>
+    <script src="notificar.js"></script>
+</body>
+
+</html>

@@ -38,7 +38,7 @@
             <p>
                 Apague os dados aqui
             </p>
-            <button id="apagar-dados" class="bg-red-500 rounded-md p-2">Apagar Dados</button>
+            <button id="apagar-dados" title="Apagar dados" class="bg-red-500 rounded-md p-2">Apagar Dados</button>
         </section>
 
         <section id="notificacao" class="bg-[#3276BF] flex flex-col p-5 rounded-md mt-5 text-center">
@@ -46,9 +46,20 @@
             <p>
                 Ative ou desative os Pop-ups aqui
             </p>
-            <button id="ativar-desativar-popUp" class="bg-gray-500 p-2 rounded-md">Desativar Pop-Up</button>
-            <span id="on-off"></span>
+            <button id="ativar-desativar-popUp" class="bg-gray-500 p-2 rounded-md"></button>
         </section>
+
+        <section id="historico" class="bg-[#3276BF] flex flex-col p-5 rounded-md mt-5 text-center">
+            <h1 class="text-3xl text-center">
+                Histórico
+            </h1>
+            <ul>
+                <li>Tarefas: <span id="total-tarefas">0</span></li>
+                <li>Tarefas deletadas: <span id="deletadas">0</span></li>
+                <li>Tarefas concluídas: <span id="feitas">0</span></li>
+            </ul>
+        </section>
+
         <a href="index.html">Voltar</a>
         <div id="pop-up" class="flex fixed top-0 right-0  mx-2 flex-col justify-center gap-5 my-2 w-[50vw]">
         </div>
@@ -56,8 +67,8 @@
 
     </main>
 
-    <script src="config.js"></script>
-    <script src="notificar.js"></script>
+    <script src="script/notificar.js"></script>
+    <script src="script/config.js"></script>
 </body>
 
 </html>

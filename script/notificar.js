@@ -1,3 +1,5 @@
+let ntfOn = localStorage.getItem('ntfOn');
+ntfOn = ntfOn === null ? true : JSON.parse(ntfOn);
 const mensagens = ['Tarefa Salva', '+ 1 tarefa concluída', 'Tarefa deletada', 'Tarefa editada', 'Dados apagados']
 
 const cores = ['bg-[#32ADE6]', 'bg-[#34C759]', 'bg-[#FF2D55]', 'bg-[#FF9500]', 'bg-[#FF3B30]'];
@@ -6,7 +8,7 @@ let msgIndex = 0;
 
 const div = document.querySelector('#pop-up');
 function notificar(e) {
-
+    if (!ntfOn) return;
     const h1 = document.createElement('h1');
     div.appendChild(h1);
 

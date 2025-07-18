@@ -18,13 +18,15 @@ const tarefasDados = {
     }
 }
 
+/* const dados = {
+    feitas: 0,
+    deletadas: 0,
+    tarefas: localStorage.getItem()
+};
 
-let feitas = 0;
+console.log(dadosFeitos); */
 
-const tarefasBaixas = JSON.parse(localStorage.getItem('baixa'));
-const tarefasMedias = JSON.parse(localStorage.getItem('media'));
-const tarefasAltas = JSON.parse(localStorage.getItem('alta'));
-
+const tarefas = localStorage;
 function salvar(local) {
     localStorage.setItem(local, JSON.stringify(tarefasDados[local].normal));
 }
@@ -41,7 +43,7 @@ form.addEventListener('submit', (e) => {
     const texto = input.value.trim();
     if (texto === '') return;
 
-
+let feitas = 0;
     ul.innerHTML = '';
 
     tarefasDados[importancia].normal.push(texto);

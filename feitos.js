@@ -1,1 +1,0 @@
-let feitas = 0;

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your List</title>
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap" rel="stylesheet">
+    <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 
     <style>
@@ -18,6 +19,7 @@
 </head>
 
 <body class="bg-[#B4E2EB]">
+    <!-- Nav protótipo -->
     <header>
         <nav
             class="w-[100%] bg-[#3276BF] flex justify-between gap-10 items-center fixed top-0 left-0 md:px-10 px-7 py-2 text-center">
@@ -30,8 +32,10 @@
         </nav>
     </header>
 
+
     <main class="flex flex-col items-center mt-[20%] md:mt-20">
 
+        <!-- Colhe as tarefas -->
         <section class="mt-10" id="inicio">
             <form id="form"
                 class="flex flex-col justify-center gap-5 items-center text-white text-xl bg-[#4080C5] p-5 rounded-xl">
@@ -40,7 +44,7 @@
                 </h1>
                 <input type="text"
                     class="bg-[#CBE4E7] rounded-xl px-1 text-center outline-none w-100 text-black placeholder-[#484747] border border-[#000000]"
-                    required placeholder="Insira a tarefa..." id="input-tarefa" autocomplete="off">
+                    placeholder="Insira a tarefa..." id="input-tarefa" autocomplete="off">
                 <select name="options" id="options"
                     class="bg-[#CBE4E7] rounded-xl px-7 outline-none w-100 text-center text-black border border-[#000000]">
                     <option value="baixa" class="">Prioridade Baixa</option>
@@ -52,6 +56,7 @@
             </form>
         </section>
 
+        <!-- Renderiza e insere as tarefas -->
         <section id="tarefas-container" class="flex flex-col mt-5">
             <div class="flex flex-col justify-center text-center items-center bg-[#4080C5] rounded-xl">
                 <h1 class="text-3xl">
@@ -74,11 +79,28 @@
             </div>
         </section>
     </main>
+    
+    <!-- Rodapé -->
+    <footer>
 
-    <div id="pop-up" class="flex fixed top-0 right-0  mx-2 flex-col justify-center gap-5 my-2 w-[50vw]">
+    </footer>
+
+    <!-- Container do Pop-up -->
+    <div id="pop-up" class="flex fixed top-0 right-0  mx-2 flex-col justify-center gap-5 my-2 w-[50vw] md:w-[25vw]">
     </div>
+    <!-- Container do editor -->
+    <form id="editar"
+        class="w-screen h-screen bg-[rgba(0,0,0,0.95)] fixed left-0 top-0 flex justify-center  text-center flex-col items-center gap-5 hidden">
+        <span class="text-5xl fixed top-0 right-0 m-5 text-red-500 font-sans cursor-pointer" id="fechar-editor">X</span>
+        <input type="text" placeholder="Edite sua tarefa" class="placeholder-black p-1 text-black outline-none"
+            title="Editar">
+        <button type="submit" class="bg-green-500 p-1 rounded-md">Editar Tarefa</button>
+    </form>
+    </div>
+    <!-- Nav temporário -->
+    <a href="configuracao.html" class="text-black">Configurações</a>
 
-    <a href="configuracao.html">Configurações</a>
+    <!-- Scripts -->
     <script src="script/script.js"></script>
     <script src="script/notificar.js"></script>
 </body>

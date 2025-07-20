@@ -10,8 +10,8 @@ const fecharEditor = document.querySelector('#fechar-menu');
 /* Dados */
 const tarefasDados = JSON.parse(localStorage.getItem('tarefas')) || [];
 let listaDeTarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
-let feitas = JSON.parse(localStorage.getItem('tarefas')) || 0;
-
+let feitas = JSON.parse(localStorage.getItem('feitas')) || 0;
+console.log(feitas)
 /* Insere tarefas */
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -91,7 +91,6 @@ function renderizar() {
                 feitas--;
                 localStorage.setItem('feitas', JSON.stringify(feitas));
             }
-            console.log('tarefas feitas: ' + feitas)
         })
     })
 }

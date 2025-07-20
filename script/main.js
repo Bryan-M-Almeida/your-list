@@ -9,17 +9,15 @@ let msgIndex = 0;
 let ntfOn = localStorage.getItem('ntfOn');
 ntfOn = ntfOn === null ? true : JSON.parse(ntfOn);
 
-
-
-
-
-
 /* Notificação Pop-Up */
 function notificar(e) {
     if (!ntfOn) return;
     const h1 = document.createElement('h1');
     div.appendChild(h1);
-
+    /* Remover pop-up */
+    h1.addEventListener('click', (e) => {
+        e.target.remove();
+    })
     if (e === 'salvo') {
         msgIndex = 0;
         const msgClasse = `item ${cores[msgIndex]} p-4 sm:p-5 md:p-5 lg:p-8 rounded-md transform cursor-pointer transition duration-500 text-xl md:text-3xl text-center text-black`;
